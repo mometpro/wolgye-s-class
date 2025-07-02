@@ -96,31 +96,13 @@ const siteData = {
     // --- 5. 페이지별 콘텐츠 ---
     pageContents: {
         cover: { title: "표지", description: "석계역 더블 역세권, 새로운 중심이 될 프리미엄" },
-        location: { 
-            title: "석계역 초역세권", 
-            subtitle: "서울 어디든 빠르게 통하는 교통의 허브", 
-            coreLocation: "1·6호선 석계역, GTX-C 광운대역 인접",
-            transportInfo: [
-                { icon: "fa-train-subway", title: "1·6호선 석계역", desc: "더블 초역세권" },
-                { icon: "fa-rocket", title: "GTX-C 광운대역", desc: "강남 10분대" },
-                { icon: "fa-road", title: "동부·북부간선도로", desc: "서울 전역 쾌속 이동" }
-            ]
-        },
+        location: { title: "석계역 초역세권", subtitle: "서울 어디든 빠르게 통하는 교통의 허브", coreLocation: "1·6호선 석계역, GTX-C 광운대역 인접" },
         premium: { title: "압도적 프리미엄", subtitle: "교통, 자연, 생활을 모두 품은 완벽한 입지", features: [
             { icon: "fa-train-subway", title: "더블 역세권", desc: "1·6호선 석계역 바로 앞, 초역세권" },
             { icon: "fa-rocket", title: "GTX-C 광역교통", desc: "광운대역 GTX-C노선으로 강남까지 10분대" },
             { icon: "fa-tree", title: "북서울꿈의숲", desc: "가까이에서 누리는 쾌적한 자연 환경" },
             { icon: "fa-building-columns", title: "장위뉴타운", desc: "대규모 주거타운으로 변모할 미래가치" }
         ]},
-        futureValue: { 
-            title: "눈부신 미래가치", 
-            subtitle: "장위뉴타운의 비전을 선점할 마지막 기회", 
-            features: [
-                { icon: "fa-building-columns", title: "광운대 역세권 개발", desc: "동북권 경제·문화의 새로운 중심지로 거듭날 대규모 복합 개발의 최대 수혜" },
-                { icon: "fa-rocket", title: "GTX-C & E 노선", desc: "강남을 10분대로! 수도권 교통의 핵심이 될 더블 광역교통망 프리미엄" },
-                { icon: "fa-city", title: "장위뉴타운의 완성", desc: "약 2만 5천 세대 미니 신도시급 주거타운의 완성으로 높아지는 주거 가치" }
-            ]
-        },
         educationSpecial: { title: "완벽한 교육 환경", subtitle: "자녀의 미래를 위한 최고의 선택", features: [
             { icon: "fa-school", title: "안심 도보 통학", desc: "단지 인근 선곡초, 석관중·고 위치" },
             { icon: "fa-graduation-cap", title: "명문 학원가", desc: "강북 교육의 중심, 중계동 학원가 인접" },
@@ -176,31 +158,14 @@ const siteData = {
         <div id="page-container">
             <div class="page flex flex-col justify-center items-center" data-page-name="cover">
                 <img data-src="img_cover_video_thumb" alt="현장 전경" class="w-full max-w-md rounded-lg shadow-lg mb-4">
+                <img data-src="img_logo_apart" alt="아파트 로고" class="h-8 my-2">
                 <p class="font-semibold text-gray-800 text-lg md:text-xl text-center" data-content="cover.description"></p>
             </div>
 
-            <div class="page" data-page-name="location">
-                <h2 class="section-title" data-content="location.title"></h2>
-                <p class="section-subtitle" data-content="location.subtitle"></p>
-                <img data-src="img_location_map" alt="입지" class="w-full h-auto rounded-lg shadow-md mb-4">
-                <div class="space-y-2">
-                    <div class="text-center bg-gray-50 p-3 rounded-lg shadow-sm">
-                        <p class="font-bold text-gray-800 text-sm md:text-base">사업지 주소</p>
-                        <p class="text-xs md:text-sm text-gray-600" data-content="contact.siteAddress"></p>
-                    </div>
-                </div>
-                <div class="mt-6">
-                    <h3 class="font-bold text-center text-gray-700 mb-3">핵심 교통망</h3>
-                    <div class="grid grid-cols-3 gap-3 text-center" id="transport-info-list">
-                        <!-- Populated by JS -->
-                    </div>
-                </div>
-            </div>
+            <div class="page" data-page-name="location"><h2 class="section-title" data-content="location.title"></h2><p class="section-subtitle" data-content="location.subtitle"></p><img data-src="img_location_map" alt="입지" class="w-full h-auto rounded-lg shadow-md mb-4"><div class="space-y-2"><div class="text-center bg-gray-50 p-3 rounded-lg shadow-sm"><p class="font-bold text-gray-800 text-sm md:text-base">사업지 주소</p><p class="text-xs md:text-sm text-gray-600" data-content="contact.siteAddress"></p></div><div class="text-center bg-indigo-50 p-3 rounded-lg shadow-sm"><p class="font-bold text-indigo-800 text-sm md:text-base">핵심 입지</p><p class="text-xs md:text-sm text-indigo-600" data-content="location.coreLocation"></p></div></div></div>
             
             <div class="page" data-page-name="premium"><h2 class="section-title" data-content="premium.title"></h2><p class="section-subtitle" data-content="premium.subtitle"></p><div class="space-y-4" data-infographic="premium"></div></div>
             
-            <div class="page" data-page-name="futureValue"><h2 class="section-title" data-content="futureValue.title"></h2><p class="section-subtitle" data-content="futureValue.subtitle"></p><div class="space-y-4" data-infographic="futureValue"></div></div>
-
             <div class="page" data-page-name="educationSpecial"><h2 class="section-title" data-content="educationSpecial.title"></h2><p class="section-subtitle" data-content="educationSpecial.subtitle"></p><div class="space-y-4" data-infographic="educationSpecial"></div></div>
             
             <div class="page" data-page-name="schoolInfo"><h2 class="section-title" data-content="schoolInfo.title"></h2><p class="section-subtitle" data-content="schoolInfo.subtitle"></p><div class="space-y-6"><div class="bg-white p-4 rounded-xl shadow-lg border border-gray-100"><h3 class="font-bold text-lg text-blue-600 mb-3">초등학교 정보</h3><div class="relative pt-6"><div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-gradient-to-r from-green-400 to-yellow-500 h-2 rounded-full" style="width: 20%;"></div></div><div class="absolute text-orange-500" style="left: 20%; top: 0; transform: translateX(-50%);"><i class="fa-solid fa-person-walking text-2xl"></i></div></div><div class="flex justify-between text-xs text-gray-500 mt-1 mb-4"><span>5분</span><span>10분</span><span>20분</span></div><div class="flex justify-between items-center"><div><p class="font-semibold text-gray-800" data-content="schoolInfo.elementary.name"></p><p class="text-sm text-gray-500" data-content="schoolInfo.elementary.type"></p></div><div class="text-right"><p class="font-bold text-blue-600" data-content="schoolInfo.elementary.distance"></p><p class="text-xs text-green-600" data-content="schoolInfo.elementary.note"></p></div></div></div><div class="bg-white p-4 rounded-xl shadow-lg border border-gray-100"><h3 class="font-bold text-lg text-green-600 mb-2">중학교 정보</h3><div class="flex justify-between items-center"><div><p class="font-semibold text-gray-800" data-content="schoolInfo.middle.name"></p><p class="text-sm text-gray-500" data-content="schoolInfo.middle.type"></p></div><div class="text-right"><p class="font-semibold text-green-600" data-content="schoolInfo.middle.performance"></p><p class="text-xs text-gray-500" data-content="schoolInfo.middle.note"></p></div></div></div><div class="bg-white p-4 rounded-xl shadow-lg border border-gray-100"><h3 class="font-bold text-lg text-purple-600 mb-2">고등학교 정보</h3><div class="flex justify-between items-center"><div><p class="font-semibold text-gray-800" data-content="schoolInfo.high.name"></p><p class="text-sm text-gray-500" data-content="schoolInfo.high.type"></p></div><div class="text-right"><p class="font-semibold text-purple-600" data-content="schoolInfo.high.classSize"></p><p class="text-xs text-green-600" data-content="schoolInfo.high.note"></p></div></div></div></div></div>
@@ -274,20 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 lifeInfraList.innerHTML += `<div class="bg-gray-50 p-3 rounded-lg flex items-center space-x-3 shadow-sm"><div class="bg-${color}-100 text-${color}-700 p-2 rounded-full shrink-0"><i class="fa-solid ${item.icon}"></i></div><div><h4 class="font-bold text-sm">${item.title}</h4><p class="text-xs text-gray-600">${item.desc}</p></div></div>`;
             });
         }
-
-        const transportInfoList = document.getElementById('transport-info-list');
-        if (siteData.pageContents.location && siteData.pageContents.location.transportInfo && transportInfoList) {
-            transportInfoList.innerHTML = ''; // Clear
-            siteData.pageContents.location.transportInfo.forEach(item => {
-                transportInfoList.innerHTML += `
-                    <div class="bg-gray-100 p-3 rounded-lg flex flex-col items-center justify-center">
-                        <i class="fa-solid ${item.icon} text-2xl text-indigo-500 mb-2"></i>
-                        <p class="font-bold text-sm text-gray-800">${item.title}</p>
-                        <p class="text-xs text-gray-600">${item.desc}</p>
-                    </div>
-                `;
-            });
-        }
         
         document.querySelectorAll('[data-features]').forEach(el => {
             const unitKey = el.dataset.features;
@@ -353,8 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const visiblePages = pages.filter(page => {
             const pageName = page.dataset.pageName;
             const data = getNestedValue(`pageContents.${pageName}`);
-            // Check if data exists and has a title, or if it's the special 'location' page which is always shown
-            return (data && data.title) || pageName === 'location';
+            return data && data.title;
         });
 
         pages.forEach(p => { 
